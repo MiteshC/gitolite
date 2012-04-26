@@ -1,5 +1,7 @@
 
-<head><style>
+<head>
+    <title>installing gitolite</title>
+<style>
     body        { background: #fff; text-color: #000; margin-left:  40px;   font-size:  0.9em;  font-family: sans-serif; max-width: 800px; }
     h1          { background: #ffb; text-color: #000; margin-left: -30px;   border-top:    5px  solid #ccc; }
     h2          { background: #ffb; text-color: #000; margin-left: -20px;   border-top:    3px  solid #ddd; }
@@ -8,7 +10,8 @@
     code        { font-size:    1.1em;  background:  #ddf; text-color: #000; }
     pre         { margin-left:  2em;    background:  #ddf; text-color: #000; }
     pre code    { font-size:    1.1em;  background:  #ddf; text-color: #000; }
-</style></head>
+</style>
+</head>
 
 <p style="text-align:center">
     <a href="master-toc.html">master TOC</a>
@@ -61,6 +64,9 @@ git repos to any number of "virtual" users, without giving them a shell.</p>
 <em>git</em>, and that is what we will use throughout the documentation.  However
 RPMs and DEBs create a user called <em>gitolite</em> for this, so adjust instructions
 and examples accordingly.</p>
+
+<p><strong>Unless otherwise stated, everything in this page is to be done by logging in
+as this "hosting user"</strong>.</p>
 
 <p>Notes:</p>
 
@@ -219,7 +225,7 @@ your users, and how much time it might take you to migrate.  (The closer
 you were to a default install of the old gitolite, the less time a
 migration will take.)</p>
 
-<p>This includes at least running <code>check-g2-compat</code> to see what are the big
+<p>This includes at least running <code>extras/check-g2-compat</code> to see what are the big
 issues you might need to address during the migration.</p></li>
 </ol>
 

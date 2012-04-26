@@ -1,5 +1,7 @@
 
-<head><style>
+<head>
+    <title>migrating from gitosis to gitolite</title>
+<style>
     body        { background: #fff; text-color: #000; margin-left:  40px;   font-size:  0.9em;  font-family: sans-serif; max-width: 800px; }
     h1          { background: #ffb; text-color: #000; margin-left: -30px;   border-top:    5px  solid #ccc; }
     h2          { background: #ffb; text-color: #000; margin-left: -20px;   border-top:    3px  solid #ddd; }
@@ -8,7 +10,8 @@
     code        { font-size:    1.1em;  background:  #ddf; text-color: #000; }
     pre         { margin-left:  2em;    background:  #ddf; text-color: #000; }
     pre code    { font-size:    1.1em;  background:  #ddf; text-color: #000; }
-</style></head>
+</style>
+</head>
 
 <p style="text-align:center">
     <a href="master-toc.html">master TOC</a>
@@ -72,11 +75,11 @@ have a clone of the gitosis-admin repo so now you have both).</p></li>
 <li><p><strong>Convert</strong> your gitosis config file and append it to your gitolite config
 file.  Substitute the path for your gitosis-admin clone in <code>$GSAC</code> below,
 and similarly the path for your gito<strong>lite</strong>-admin clone in <code>$GLAC</code>.  (The
-convert-gitosis-conf program is a standalone program that you can bring
+extras/convert-gitosis-conf program is a standalone program that you can bring
 over from any gitolite clone; you don't have to install all of gitolite on
 your workstation to use this):</p>
 
-<pre><code>./convert-gitosis-conf &lt; $GSAC/gitosis.conf &gt;&gt; $GLAC/conf/gitolite.conf
+<pre><code>./extras/convert-gitosis-conf &lt; $GSAC/gitosis.conf &gt;&gt; $GLAC/conf/gitolite.conf
 </code></pre>
 
 <p><strong>Be sure to check the file to make sure it converted correctly</strong> -- due

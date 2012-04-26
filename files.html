@@ -1,5 +1,7 @@
 
-<head><style>
+<head>
+    <title>files involved in gitolite</title>
+<style>
     body        { background: #fff; text-color: #000; margin-left:  40px;   font-size:  0.9em;  font-family: sans-serif; max-width: 800px; }
     h1          { background: #ffb; text-color: #000; margin-left: -30px;   border-top:    5px  solid #ccc; }
     h2          { background: #ffb; text-color: #000; margin-left: -20px;   border-top:    3px  solid #ddd; }
@@ -8,7 +10,8 @@
     code        { font-size:    1.1em;  background:  #ddf; text-color: #000; }
     pre         { margin-left:  2em;    background:  #ddf; text-color: #000; }
     pre code    { font-size:    1.1em;  background:  #ddf; text-color: #000; }
-</style></head>
+</style>
+</head>
 
 <p style="text-align:center">
     <a href="master-toc.html">master TOC</a>
@@ -41,10 +44,10 @@ $ ls -a
 ./  ../  .bash_logout  .bash_profile  .bashrc  gitolite/
 
 $ ls -aF gitolite
-./  ../  check-g2-compat*  doc/  dot.pl  .git/  install*  src/  t/
+./  ../  doc/  dot.pl  extras/  .git/  install*  src/  t/
 </code></pre>
 
-<p>If we were an existing user, we'd run the migration checker 'check-g2-compat'
+<p>If we were an existing user, we'd run the migration checker 'extras/check-g2-compat'
 (see <a href="g2migr.html">here</a>).  For now we're only interested in "gitolite/src", so:</p>
 
 <pre><code>$ ls -aF gitolite/src
