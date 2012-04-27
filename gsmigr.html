@@ -75,11 +75,11 @@ have a clone of the gitosis-admin repo so now you have both).</p></li>
 <li><p><strong>Convert</strong> your gitosis config file and append it to your gitolite config
 file.  Substitute the path for your gitosis-admin clone in <code>$GSAC</code> below,
 and similarly the path for your gito<strong>lite</strong>-admin clone in <code>$GLAC</code>.  (The
-extras/convert-gitosis-conf program is a standalone program that you can bring
+convert-gitosis-conf program is a standalone program that you can bring
 over from any gitolite clone; you don't have to install all of gitolite on
 your workstation to use this):</p>
 
-<pre><code>./extras/convert-gitosis-conf &lt; $GSAC/gitosis.conf &gt;&gt; $GLAC/conf/gitolite.conf
+<pre><code>./convert-gitosis-conf &lt; $GSAC/gitosis.conf &gt;&gt; $GLAC/conf/gitolite.conf
 </code></pre>
 
 <p><strong>Be sure to check the file to make sure it converted correctly</strong> -- due

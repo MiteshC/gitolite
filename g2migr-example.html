@@ -34,7 +34,7 @@
 <li>preparing for the migration
 <ul>
 <li>getting g3</li>
-<li>run extras/check-g2-compat</li>
+<li>run check-g2-compat</li>
 </ul></li>
 <li>the actual migration
 <ul>
@@ -131,12 +131,12 @@ Branch master set up to track remote branch master from origin.
 Switched to a new branch 'master'
 </code></pre>
 
-<h3>run extras/check-g2-compat</h3>
+<h3>run check-g2-compat</h3>
 
 <p>This is a quick and dirty program to catch some of the big issues.</p>
 
 <pre><code>$ cd
-$ gitolite/extras/check-g2-compat
+$ gitolite/check-g2-compat
 INFO        This program only checks for uses that make the new g3 completely unusable
             or that might end up giving *more* access to someone if migrated as-is.
             It does NOT attempt to catch all the differences described in the docs.
@@ -200,12 +200,12 @@ hooks:</p>
 <h3>step 2</h3>
 
 <p>I have no variables that <em>must</em> be preset, since the report by
-<code>extras/check-g2-compat</code> is clear.</p>
+<code>check-g2-compat</code> is clear.</p>
 
 <h3>step 3</h3>
 
 <p>Here we install the new gitolite.  Remember we already got the new software
-(in order to run 'extras/check-g2-compat').</p>
+(in order to run 'check-g2-compat').</p>
 
 <p>Just check that bin is empty, then run 'install -ln' from the gitolite source
 tree:</p>
