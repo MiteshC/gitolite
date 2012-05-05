@@ -82,8 +82,7 @@ access configured and working.</li>
 
 <p>Edit your .gitolite.rc and add</p>
 
-<pre><code>$ENV{GIT_HTTP_BACKEND} = "/usr/libexec/git-core/git-http-backend";
-$ENV{PATH} .= ":/opt/git/bin";
+<pre><code>$ENV{PATH} .= ":/opt/git/bin";
 </code></pre>
 
 <p>at the very top (as described in <code>t/smart-http.root-setup</code>).</p>
