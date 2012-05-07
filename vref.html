@@ -42,13 +42,6 @@ who stop reading halfway!</p>
 <p>Now dev2 and dev3 cannot push changes that affect more than 9 files at a time,
 nor those that have more than 3 new files.</p>
 
-<p>Another example is detecting duplicate pubkeys in a push to the admin repo:</p>
-
-<pre><code>repo gitolite-admin
-    # ... normal rules ...
-    -   VREF/DUPKEYS            =   @all
-</code></pre>
-
 <hr />
 
 <h2>rule matching recap</h2>
@@ -90,7 +83,7 @@ the VREF only in "deny" rules.</p>
 
 <p>This in turn means any existing update hook can be used as a VREF <em>as-is</em>, as
 long as it (a) prints nothing on success and (b) dies on failure.  See the
-email-check and dupkeys examples later.</p>
+email-check example later.</p>
 
 <h2>how it works -- overview</h2>
 
