@@ -31,6 +31,36 @@ who stop reading halfway!</p>
 
 <hr />
 
+<ul>
+<li><a href="vref.html">virtual refs</a>
+<ul>
+<li>rule matching recap</li>
+<li>what is a virtual ref</li>
+<li><a href="vref.html#vref-fallthru">fallthru is success here</a></li>
+<li>how it works -- overview</li>
+<li>how it works -- details
+<ul>
+<li>arguments passed to the vref code</li>
+</ul></li>
+<li>what (else) can the vref code pass back</li>
+<li>VREFs shipped with gitolite
+<ul>
+<li><a href="vref.html#NAME">restricting pushes by dir/file name</a></li>
+<li>number of new files</li>
+<li>advanced filetype detection</li>
+<li>checking author email</li>
+<li><a href="vref.html#votes">voting on commits</a></li>
+</ul></li>
+<li>other ideas -- code welcome!
+<ul>
+<li>"no non-merge first-parents"</li>
+<li>other ideas for VREFs</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<hr />
+
 <p>Here's an example to start you off.</p>
 
 <pre><code>repo    r1
@@ -296,12 +326,13 @@ copied to <code>src/VREF/EMAIL-CHECK</code> and it works, because VREFs get
 the same first 3 arguments and those are all that it cares about.  (Note: you
 have to change one subroutine in that script if you want to use it)</p>
 
-<h3>catching duplicate pubkeys</h3>
+<h3><a name="votes"></a> voting on commits</h3>
 
-<p>This checks keydir/ for duplicate keys and aborts the push if it finds any.
-You should use this only on the gitolite-admin repo.</p>
-
-<p>We covered this as a teaser example at the start.</p>
+<p>Although gitolite can't/won't do the whole "code review + workflow
+enforcement" thing that Gerrit Code Review does, a basic implementation of
+voting on a commit is surprisingly easy.  See src/VREF/VOTES for details (and
+note that the actual <em>code</em> is just 2-3 lines; the rest is inline
+documentation).</p>
 
 <h2>other ideas -- code welcome!</h2>
 
