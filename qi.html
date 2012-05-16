@@ -64,8 +64,9 @@ gitolite setup -pk your-name.pub
 <p>On your workstation:</p>
 
 <pre><code># clone the admin repo so you can start adding stuff
-# note that the clone path does NOT include "repositories/"
 git clone git@host:gitolite-admin.git
+# Note 1: clone path must not include "repositories/"
+# Note 2: it may include the ".git" at the end but it is optional
 </code></pre>
 
 <h2>next steps</h2>
